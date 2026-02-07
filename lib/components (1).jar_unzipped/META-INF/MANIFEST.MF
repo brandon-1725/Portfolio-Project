@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.10.14
+Created-By: Apache Ant(TM) version 1.10.14 compiled on August 16 2023
+Implementation-Title: OSU/CSE Software I/II Components
+Implementation-Version: 20260103-233406
+Implementation-Vendor: Department of Computer Science and Engineering,
+  The Ohio State University
+Sealed: true
+

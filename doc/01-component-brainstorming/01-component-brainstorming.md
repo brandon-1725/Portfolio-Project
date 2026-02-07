@@ -1,12 +1,11 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Brandon Reed
+- **Dot Number**: reed.2178
+- **Due Date**: 2/6/26
 
 ## Assignment Overview
 
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -18,7 +17,7 @@ Because this is a daunting project, we will be providing you with a series of
 activities to aid in your design decisions. For example, the point of this
 assignment is to help you brainstorm a few possible components and get some
 feedback. For each of these components, you will need to specify the high-level
-design in terms of the software sequence discipline. In other words, you will
+design in terms of the software seque3nce discipline. In other words, you will
 describe a component, select a few kernel methods for your component, and select
 a few secondary methods to layer on top of your kernel methods.
 
@@ -28,8 +27,6 @@ detailed feedback, which may help you decide which component to ultimately
 implement.
 
 ## Assignment Checklist
-
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -52,7 +49,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
 
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
@@ -67,7 +63,7 @@ project. Specifically, students should be able to:
 
 ## Assignment Rubric: 10 Points
 
-<!-- TODO: read the assignment rubric then delete this comment -->
+
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,15 +102,9 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+I currently do not have any career goals really set in stone. After college, I just want to get a job in the field of IT. Whether it is in software development, network, or cybersecurity, I just want to make money and start working in the field. Later down my career, I assume I will find out what I want to do, and hopefully I will be able to do that. Outside of career goals, my personal hobbies are music, computers, watching sports and playing sports, and watching movies and tv. At Ohio State, I am a member of the marching band which has been a ton of fun so far. Last summer, I starting coding an html website and learned html and css. I do enjoy coding, so I think overall I will enjoy making a component, and it is something that I can write on my resume when applying to jobs. I do like the idea of the fantasy football tracker so I think I will do that (I might have been in three leagues this football season).
 
 ## Assignment
-
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
@@ -122,7 +112,6 @@ that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
 
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -143,7 +132,7 @@ about different ways you might allow a client to manipulate your component.
 
 ### Example Component
 
-<!-- TODO: review this example component then delete this comment -->
+
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -211,68 +200,87 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: Fantasy Football Database
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Keeps track of player points such as how players got their points (ie receptions, yards, touchdowns).
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - void enterPlayer(String position, String name) enters player into the component.
+    - void enterStat(String stat, int value) enters the stat and the value into the component.
+    - void updateStat(String stat, int value) enters a value of a stat
+    - Map.Pair<String, int[]> getStatAndValue(String stat) returns the stat and value for use in secondary methods
+    - Map.Pair<String, int> removeStat(string stat) removes the stat and returns the stat and value in an array
+    - int removeValue(String stat) removes and returns the values of the stat
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - int averageStatValue(String stat) returns the average value of a stat
+    - String startOrDrop(String player1, String player2, String[] stats) returns the player that has a higher average of whatever stats are in the array
+    - int leastValueofStat(String stat) returns the lowest value of the stat
+    - int greatestValueOfStat(String stat) returns the highest value of the stat
+    - Int[] valuesGreaterThan(String stat, int value) returns an array of ints on how many times the player has scored more points than a value
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      Yes. The user needs to be able to change stat values.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      Yes, probably Map<String, int[]>. Easiest way to store stats for a player
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't know
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      Yes, for example, averageStatValue gets would need to use getStatAndValue and calculate the average of the values.
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: Bank account
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+Keeps track of a bank accout and the information
+**Kernel Methods**:
+    - String id() returns account number
+    - String owner() returns name of owner
+    NaturalNumber balance() returns balance of account
+    - void deposit(NaturalNumber amount) updates balance by adding deposit
+    - NaturalNumber withdraw(NaturalNumber amount) updates balance by subtracting value and returns the balance
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - void transferTo(String accountNumber, NaturalNumber amount) transfers money from one account to another
+    - void applyInterest(String APY) calculates and applies interest
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      -yes, user would want to change value of bank account
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Natural numbers, so numbers are always positive and better methods than just int
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Probably no
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - transferTo can use withdraw and deposit
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: Music playist
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Playlist of songs
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - int length() returns length
+    - void addSong(String song) adds a string to a playlist
+    - String getSong(String song) gets a song.
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - String trackAt(int pos) returns track at a position
+    - void shuffle() shuffles playlist
+    - String nextSong() returns the next song in playlist
+    - void sortByTitle() sorts songs  alphabeticaly
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, user would want to add and remove songs
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Probably a set
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't know
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, nextSong would need to get a song to play
 
 ## Post-Assignment
 
@@ -281,7 +289,7 @@ completed the assignment.
 
 ### Changelog
 
-<!-- TODO: create CHANGELOG then delete this comment -->
+
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -299,13 +307,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
-## YYYY.MM.DD
+## 2026.02.06
 
 ### Added
-
-- Designed a <!-- insert name of component 1 here --> component
-- Designed a <!-- insert name of component 2 here --> component
-- Designed a <!-- insert name of component 3 here --> component
+- Designed a fantasy football database component
+- Designed a bank account component
+- Designed a music component
 ```
 
 Here `YYYY.MM.DD` would be the date of your submission, such as 2024.04.21.
@@ -320,7 +327,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
 
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
@@ -330,11 +336,9 @@ all your work is there before submitting. For future assignments, you will
 just be submitting a link to a pull request. This will be the only time
 you have to submit any PDFs.
 
-<!-- TODO: upload a PDF of this document and the CHANGELOG to Carmen then delete this comment -->
 
 ### Peer Review
 
-<!-- TODO: review the peer review guidelines then delete this comment -->
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the
@@ -361,7 +365,6 @@ If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
 
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [example-components]: https://therenegadecoder.com/code/the-never-ending-list-of-small-programming-project-ideas/
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/

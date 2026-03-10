@@ -87,3 +87,16 @@ the following form: YYYY.0M.0D.
 - Designed a fantasy football database component
 - Designed a bank account component
 - Designed a music component
+
+## 2026.03.01
+
+### Added
+
+- Designed a proof of concept for fantasy football individual player database component
+
+### Updated
+
+- Changed design to include removal/adjusting kernel methods to reflect that the database is for one player or name changes. Specifically, removal of updateStat kernel method and changed kernel method name of getStatAndValue to getStatAndValues, and any int[] has been changed to use Sequences from OSU CSE API.
+- Changed method parameters of enterPlayer and enterStat to reflect database is for one player.
+- Added private members, create new representation, constructors, kernel methods enterPlayer, enterStat, getStatAndValues, secondary methods averageStatValue, leastValueOfStat, and greatestValueOfStat.
+- Added a main method to show the component in action.

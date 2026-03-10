@@ -100,3 +100,14 @@ the following form: YYYY.0M.0D.
 - Changed method parameters of enterPlayer and enterStat to reflect database is for one player.
 - Added private members, create new representation, constructors, kernel methods enterPlayer, enterStat, getStatAndValues, secondary methods averageStatValue, leastValueOfStat, and greatestValueOfStat.
 - Added a main method to show the component in action.
+
+## 2026.03.13
+
+### Added
+
+- Kernel interface and secondary method interface
+
+### Updated
+- Updated various methods from component net brainstorming to reflect use of doubles and sequences.
+- Removed various methods that were not needed because either multiple methods did the same thing (or close enough), or to reflect that the database is for one player only.
+- Changed name of file for proof of concept.

@@ -105,9 +105,14 @@ the following form: YYYY.0M.0D.
 
 ### Added
 
-- Kernel interface and secondary method interface
+- Kernel interface and secondary method interface.
 
 ### Updated
 - Updated various methods from component net brainstorming to reflect use of doubles and sequences.
 - Removed various methods that were not needed because either multiple methods did the same thing (or close enough), or to reflect that the database is for one player only.
 - Changed name of file for proof of concept.
+
+## 2026.03.13
+
+### Added
+- Created hierarchy diagram of the component.

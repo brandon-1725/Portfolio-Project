@@ -116,3 +116,10 @@ the following form: YYYY.0M.0D.
 
 ### Added
 - Created hierarchy diagram of the component.
+
+## 2026.04.07
+
+### Added
+- Started the creation of the format (general form of kernel classes from the API) of the kernel implementation.
+
+### Updated

@@ -13,9 +13,18 @@ public interface FantasyFootballDatabaseKernel
      * @param name
      *            name of player entered into database.
      * @updates this
+     * @requires player name is <FirstName LastName>
      * @ensures the player is entered into the database
      */
     void enterPlayer(String name);
+
+    /**
+     * Returns the name of the player.
+     *
+     * @return String of the player's name.
+     * @ensures "Player name"
+     */
+    String getName();
 
     /**
      * Enters stat for the player into the database.
@@ -50,4 +59,12 @@ public interface FantasyFootballDatabaseKernel
      * @ensures Map.Pair<Name of stat, <stat values>>
      */
     Map.Pair<String, Sequence<Double>> removeStatAndValues(String stat);
+
+    /**
+     * Returns a sequence of stats in the database.
+     *
+     * @return sequence of strings that are the stats in the database
+     * @ensures <StatName1, StatName2, etc.>
+     */
+    Sequence<String> getStats();
 }

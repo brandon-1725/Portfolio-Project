@@ -122,4 +122,7 @@ the following form: YYYY.0M.0D.
 ### Added
 - Started the creation of the format (general form of kernel classes from the API) of the kernel implementation.
 
+## 2026.4.14
+
 ### Updated
+- Finished kernel implementation

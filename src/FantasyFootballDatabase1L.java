@@ -21,22 +21,30 @@ public class FantasyFootballDatabase1L
      */
     private Map<String, Sequence<Double>> rep;
 
+    private String playerName;
+
     /**
      * Creator of initial representation.
      */
-    private void createNewRep() {
+    private void createNewRep(String name) {
         this.rep = new Map1L<String, Sequence<Double>>();
+        this.playerName = name;
     }
 
     /*
      * Constructors ------------------------------------------------------------
      */
 
-    /**
-     * No-argument constructor.
-     */
+    /** */
     public FantasyFootballDatabase1L() {
         this.createNewRep();
+    }
+
+    /**
+     * Constructor with name parameter which is the name of the player.
+     */
+    public FantasyFootballDatabase1L(String name) {
+        this.createNewRep(name);
     }
 
     /*
@@ -66,7 +74,7 @@ public class FantasyFootballDatabase1L
 
         FantasyFootballDatabase1L localSource = (FantasyFootballDatabase1L) source;
         this.rep = localSource.rep;
-        localSource.createNewRep();
+        localSource.createNewRep(source.getName());
     }
 
     /*
@@ -79,27 +87,29 @@ public class FantasyFootballDatabase1L
     }
 
     @Override
-    void enterStat(String stat, double value) {
+    public final void enterStat(String stat, double value) {
 
     }
 
     @Override
-    Map.Pair<String, Sequence<Double>> getStatAndValues(String stat) {
+    public final Map.Pair<String, Sequence<Double>> getStatAndValues(
+            String stat) {
 
     }
 
     @Override
-    Map.Pair<String, Sequence<Double>> removeStatAndValues(String stat) {
+    public final Map.Pair<String, Sequence<Double>> removeStatAndValues(
+            String stat) {
 
     }
 
     @Override
-    String getName() {
-
+    public final String getName() {
+        return this.playerName;
     }
 
     @Override
-    Sequence<String> getStats() {
+    public final Sequence<String> getStats() {
 
     }
 }

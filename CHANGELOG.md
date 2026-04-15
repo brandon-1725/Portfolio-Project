@@ -115,7 +115,19 @@ the following form: YYYY.0M.0D.
 ## 2026.03.13
 
 ### Added
-- Created hierarchy diagram of the component.
+- Created hierarchy diagram of the component
+
+## 2026.04.03
+
+### Added
+- Created a new kernel method getName() for use in hashCode() and equals() methods from object.
+The int returned by hashCode will be how many characters in the name of the player.
+- Implemented secondary methods.
+- Added a kernel method getStats() that returns a sequence of stats for printing out the object.
+
+### Updated
+- Added a requires clause to enterName(); so that the name will be "FirstName LastName" with a space in between.
+- Changed the contract of Sequence<Double> valuesGreaterOrEqual(String stat, double value) to reflect that I wanted the method to return the values of the stats instead of how many times the player scored above the parameter stat.
 
 ## 2026.04.07
 
@@ -126,3 +138,4 @@ the following form: YYYY.0M.0D.
 
 ### Updated
 - Finished kernel implementation.
+

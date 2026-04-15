@@ -37,7 +37,7 @@ public interface FantasyFootballDatabase extends FantasyFootballDatabaseKernel {
     double greatestStatValue(String stat);
 
     /**
-     * Returns a sequence with the amount of times the player has scored more
+     * Returns a sequence with the values that player has either scored more
      * points or the exact points than a value.
      *
      * @param stat

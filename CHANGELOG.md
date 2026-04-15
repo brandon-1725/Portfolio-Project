@@ -125,4 +125,4 @@ the following form: YYYY.0M.0D.
 ## 2026.4.14
 
 ### Updated
-- Finished kernel implementation
+- Finished kernel implementation.

@@ -118,7 +118,7 @@ Below is further rationale/explanation for the rubric items above:
 > discuss how that representation will be restricted (i.e., by convention)
 > and interpreted (i.e., by correspondence).
 
-<!-- TODO: select a representation and explain why -->
+The representation will be a map with a key which is player name, and value which is a map with keys that are stats and values are the respective values for the stats. The reason I picked only one player is that it was simpler, and I figured the client (probably just me) would want to have just one player for each instance of the class. I think it is easier to understand that way and maybe the client can create a set of players to represent their team. When I had to come up with ideas, I tried to have the class due multiple players but I could not figure out a smart way to do that. So, instead, I thought of this kind-of-shitty representation and used a map within a map, and rolled with it, so here we are.
 
 > To start making your kernel implementation, make a branch off of main in your
 > new repo called something like `kernel-implementation`. There are many ways to
@@ -159,8 +159,6 @@ completed the assignment.
 
 ### Changelog
 
-<!-- TODO: update CHANGELOG then delete this comment -->
-
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
 Here's what I would expect to see at the minimum:
@@ -194,7 +192,6 @@ request merge (or at least tag your commits). This is not required.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull

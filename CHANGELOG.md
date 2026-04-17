@@ -128,3 +128,12 @@ The int returned by hashCode will be how many characters in the name of the play
 ### Updated
 - Added a requires clause to enterName(); so that the name will be "FirstName LastName" with a space in between.
 - Changed the contract of Sequence<Double> valuesGreaterOrEqual(String stat, double value) to reflect that I wanted the method to return the values of the stats instead of how many times the player scored above the parameter stat.
+
+## 2026.04.17
+
+### Added
+- Created the two test files.
+- Created use case file.
+
+### Updated
+- Formatted directory.

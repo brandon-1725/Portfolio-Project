@@ -142,6 +142,9 @@ The int returned by hashCode will be how many characters in the name of the play
 
 ### Added
 - Package components on each file.
+- Created a temporary copy of the kernel implementation so I can test it.
 
 ### Updated
 - Reimplemented equals method based on slides discussed in class.
+- Corrected methods in temporary copy of kernel implementation. Will update the
+kernel file before submitting.

@@ -78,7 +78,9 @@ public class FantasyFootballDatabase1L
 
         FantasyFootballDatabase1L localSource = (FantasyFootballDatabase1L) source;
         this.rep = localSource.rep;
+        this.playerName = localSource.playerName;
         localSource.createNewRep();
+        localSource.playerName = "emtpy";
     }
 
     /*
@@ -88,6 +90,7 @@ public class FantasyFootballDatabase1L
     @Override
     public final void enterPlayer(String name) {
         this.playerName = name;
+        this.rep.add(name, new Map1L<String, Sequence<Double>>());
     }
 
     @Override
@@ -140,22 +143,16 @@ public class FantasyFootballDatabase1L
     public final Sequence<String> getStats() {
         assert this.playerName != null : "Violation of playerName is not null";
         Sequence<String> stats = new Sequence1L<>();
-        int i = 0;
-        while (this.rep.size() != 0) {
-            Map.Pair<String, Map<String, Sequence<Double>>> nameToStatsAndValues = this.rep
-                    .removeAny();
-            Map.Pair<String, Sequence<Double>> statsAndValues = nameToStatsAndValues
-                    .value().removeAny();
+        Map<String, Sequence<Double>> statsMap = this.rep
+                .value(this.playerName);
 
-            String stat = statsAndValues.key();
-            stats.add(i, stat);
-
-            nameToStatsAndValues.value().add(statsAndValues.key(),
-                    statsAndValues.value());
-            this.rep.add(nameToStatsAndValues.key(),
-                    nameToStatsAndValues.value());
-            i++;
+        int size = statsMap.size();
+        for (int i = 0; i < size; i++) {
+            Map.Pair<String, Sequence<Double>> pair = statsMap.removeAny();
+            stats.add(i, pair.key());
+            statsMap.add(pair.key(), pair.value());
         }
+
         return stats;
     }
 }

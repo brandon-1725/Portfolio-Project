@@ -86,8 +86,7 @@ abstract class FantasyFootballDatabaseUse1 {
 
         //  Original is now cleared after transferFrom
         out.println("Original cleared: " + player.getName());
-        // Original cleared: null (or empty per convention)
-
+        // Original cleared: name is "empty"
         out.close();
     }
 }

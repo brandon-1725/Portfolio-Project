@@ -133,7 +133,15 @@ The int returned by hashCode will be how many characters in the name of the play
 
 ### Added
 - Created the two test files.
-- Created use case file.
+- Created use case files.
 
 ### Updated
 - Formatted directory.
+
+## 2026.04.21-22
+
+### Added
+- Package components on each file.
+
+### Updated
+- Reimplemented equals method based on slides discussed in class.

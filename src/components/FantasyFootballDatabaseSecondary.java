@@ -1,3 +1,5 @@
+package components;
+
 import components.sequence.Sequence;
 import components.sequence.Sequence1L;
 
@@ -31,11 +33,43 @@ public abstract class FantasyFootballDatabaseSecondary
     // CHECKSTYLE: ALLOW THIS METHOD TO BE OVERRIDDEN
     @Override
     public boolean equals(Object obj) {
-        assert this != null;
-        assert obj != null;
-
-        // had to look this up and here is my attempt
-        return (this == obj) && (this.getClass() == obj.getClass());
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (!(obj instanceof FantasyFootballDatabase)) {
+            return false;
+        }
+        FantasyFootballDatabase db = (FantasyFootballDatabase) obj;
+        if (!this.getName().equals(db.getName())) {
+            return false;
+        }
+        Sequence<String> thisStats = this.getStats();
+        Sequence<String> otherStats = db.getStats();
+        if (thisStats.length() != otherStats.length()) {
+            return false;
+        }
+        for (int i = 0; i < thisStats.length(); i++) {
+            String stat = thisStats.entry(i);
+            boolean found = false;
+            for (int j = 0; j < otherStats.length(); j++) {
+                if (otherStats.entry(j).equals(stat)) {
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                return false;
+            }
+            Sequence<Double> thisValues = this.getStatAndValues(stat).value();
+            Sequence<Double> otherValues = db.getStatAndValues(stat).value();
+            if (!thisValues.equals(otherValues)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     // CHECKSTYLE: ALLOW THIS METHOD TO BE OVERRIDDEN

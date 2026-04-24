@@ -115,7 +115,7 @@ the following form: YYYY.0M.0D.
 ## 2026.03.13
 
 ### Added
-- Created hierarchy diagram of the component.
+- Created hierarchy diagram of the component
 
 ## 2026.04.03
 
@@ -129,22 +129,13 @@ The int returned by hashCode will be how many characters in the name of the play
 - Added a requires clause to enterName(); so that the name will be "FirstName LastName" with a space in between.
 - Changed the contract of Sequence<Double> valuesGreaterOrEqual(String stat, double value) to reflect that I wanted the method to return the values of the stats instead of how many times the player scored above the parameter stat.
 
-## 2026.04.17
+## 2026.04.07
 
 ### Added
-- Created the two test files.
-- Created use case files.
+- Started the creation of the format (general form of kernel classes from the API) of the kernel implementation.
+
+## 2026.4.14
 
 ### Updated
-- Formatted directory.
+- Finished kernel implementation.
 
-## 2026.04.21-22
-
-### Added
-- Package components on each file.
-- Created a temporary copy of the kernel implementation so I can test it.
-
-### Updated
-- Reimplemented equals method based on slides discussed in class.
-- Corrected methods in temporary copy of kernel implementation. Will update the
-kernel file before submitting.

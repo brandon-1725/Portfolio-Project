@@ -69,8 +69,6 @@ abstract class FantasyFootballDatabaseUse1 {
 
         out.println("Original cleared: " + player.getName());
 
-        out.println(player);
-
         out.close();
     }
 }

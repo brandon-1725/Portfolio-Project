@@ -1,3 +1,5 @@
+package components;
+
 import components.map.Map;
 import components.sequence.Sequence;
 import components.standard.Standard;

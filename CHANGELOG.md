@@ -164,3 +164,7 @@ kernel file before submitting.
 ### Updated
 - Completed finishing touches.
 - Added tests.
+- Fixed kernel interface- Standard<FantasyFootballDatabaseKernel> to Standard<FantasyFootballDatabase>
+- Corrected valuesGreaterOrEqual(String stat, double valueToCompare) to iterate
+over stat values instead of empty sequence.
+- Reimplemented getStats() to guarantee each stat is removed.

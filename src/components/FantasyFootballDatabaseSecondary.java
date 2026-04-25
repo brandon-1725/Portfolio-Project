@@ -144,7 +144,8 @@ public abstract class FantasyFootballDatabaseSecondary
     public Sequence<Double> valuesGreaterOrEqual(String stat,
             double valueToCompare) {
         Sequence<Double> valuesGreaterOrEqual = new Sequence1L<>();
-        for (double value : valuesGreaterOrEqual) {
+        Sequence<Double> statValues = this.getStatAndValues(stat).value();
+        for (double value : statValues) {
             if (value >= valueToCompare) {
                 valuesGreaterOrEqual.add(valuesGreaterOrEqual.length(), value);
             }

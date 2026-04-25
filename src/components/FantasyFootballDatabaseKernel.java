@@ -8,7 +8,7 @@ import components.standard.Standard;
  * Fanstasy Football Database kernel component with primary methods.
  */
 public interface FantasyFootballDatabaseKernel
-        extends Standard<FantasyFootballDatabaseKernel> {
+        extends Standard<FantasyFootballDatabase> {
     /**
      * Enter player into the database.
      *

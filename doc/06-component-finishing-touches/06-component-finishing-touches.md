@@ -305,18 +305,18 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I think I will understand software development more because I understand the pain of starting something from scratch and working through all the pains and looking back at what I previously wrote thinking "what the hell was I thinking writing code this way?" This also will make me want to start doing things on my own to continue learning and practicing software development.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+Some gaps I had was creating methods and thinking about how I want to do things. The biggest challenge of this process was creating the convention and correspondence, so practicing that was helpful. For creating methods, I went through multiple different methods and figuring out what methods to write was challenging.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+My perspective has not really changed, but it is still something I enjoy, especially because I was able to create something that I was interested in, and not something I was forced to do.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -324,25 +324,28 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+Creativity through creating something of my own from scratch. Documenting code.
+Improving previous implementations.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+Designed and built an original software component from scratch with no existing template to follow
+Wrote clear, thorough documentation for all methods and classes following established conventions
+Improved upon a prior implementation by identifying weaknesses and refactoring for correctness
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+I don't hate the topic I picked. Nor am I more interested. I may or may not do software development, but this process was good for me because I learned more about the software development process.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+I will probably learn full stack development and maybe game development. My dad works in IT for AEP, so I might ask him for some contacts or ask you as you mentioned in career day.
 
 ### Changelog
 

@@ -62,15 +62,6 @@ abstract class FantasyFootballDatabaseUse1 {
         Sequence<String> updatedStats = player.getStats();
         out.println("Updated tracked stats: " + updatedStats);
 
-        FantasyFootballDatabase archive = new FantasyFootballDatabase1L();
-        archive.transferFrom(player);
-
-        out.println("Archive player: " + archive.getName());
-
-        out.println("Original cleared: " + player.getName());
-
-        out.println(player);
-
         out.close();
     }
 }

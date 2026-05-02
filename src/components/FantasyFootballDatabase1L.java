@@ -71,7 +71,7 @@ public class FantasyFootballDatabase1L
     }
 
     @Override
-    public final void transferFrom(FantasyFootballDatabaseKernel source) {
+    public final void transferFrom(FantasyFootballDatabase source) {
         assert source != null : "Violation of: source is not null";
         assert source != this : "Violation of: source is not this";
         assert source instanceof FantasyFootballDatabase1L : "Violation of: source is of dynamic type FantasyFootballDatabase1L";
@@ -143,13 +143,18 @@ public class FantasyFootballDatabase1L
     public final Sequence<String> getStats() {
         assert this.playerName != null : "Violation of playerName is not null";
         Sequence<String> stats = new Sequence1L<>();
+        Sequence<Map.Pair<String, Sequence<Double>>> temp = new Sequence1L<>();
         Map<String, Sequence<Double>> statsMap = this.rep
                 .value(this.playerName);
 
-        int size = statsMap.size();
-        for (int i = 0; i < size; i++) {
+        while (statsMap.size() > 0) {
             Map.Pair<String, Sequence<Double>> pair = statsMap.removeAny();
-            stats.add(i, pair.key());
+            stats.add(stats.length(), pair.key());
+            temp.add(temp.length(), pair);
+        }
+
+        for (int i = 0; i < temp.length(); i++) {
+            Map.Pair<String, Sequence<Double>> pair = temp.entry(i);
             statsMap.add(pair.key(), pair.value());
         }
 
